@@ -132,7 +132,12 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  result = recipe.ingredients.map(Element=>Element.split(' ').slice(2,Element.length).join(" "));
+  recipe.ingredients.map((Element) => {
+    let i = Element.indexOf(' ', 3);
+    let ingredients=Element.slice(i + 1, Element.length);
+    console.log(ingredients);
+    result.push(ingredients);
+  });
   return result;
 };
 
