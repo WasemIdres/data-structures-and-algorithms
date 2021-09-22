@@ -157,17 +157,8 @@ const hasChildrenValues = (arr, character) => {
   // Solution code here...
   let check=false
   Object.values(arr).forEach(value =>{
-   
     if (Object.values(value).includes(character) )
      check=(Object.keys(value).includes('children'));
-    // if (Object.keys(value).includes("children")) {
-    //   return true
-    // } else {
-    //   return false
-    // }
-  //   return true
-  //  else
-  //   return false})
   })
   return check;
 };
